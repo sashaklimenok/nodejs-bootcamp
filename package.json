@@ -18,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/sashaklimenok/nodejs-bootcamp/issues"
   },
-  "homepage": "https://github.com/sashaklimenok/nodejs-bootcamp#readme"
+  "homepage": "https://github.com/sashaklimenok/nodejs-bootcamp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-config-google": "^0.14.0"
+  }
 }
