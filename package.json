@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-bootcamp",
+  "version": "1.0.0",
+  "description": "nodejs bootcamp",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sashaklimenok/nodejs-bootcamp.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Aliaksandr Klimianok",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sashaklimenok/nodejs-bootcamp/issues"
+  },
+  "homepage": "https://github.com/sashaklimenok/nodejs-bootcamp#readme"
+}
