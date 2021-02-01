@@ -11,6 +11,7 @@ module.exports = {
         "ecmaVersion": 11
     },
     "rules": {
-        "prettier/prettier": ["error", { "singleQuote": true }]
+        "prettier/prettier": ["error", { "singleQuote": true }],
+        "object-curly-spacing": ["error", "always"]
     }
 };
