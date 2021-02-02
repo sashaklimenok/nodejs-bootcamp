@@ -24,6 +24,14 @@ module.exports = {
         "no-underscore-dangle": "off",
         "class-methods-use-this": "off",
         "prefer-destructuring": ["error", { "object": true, "array": false }],
-        "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }]
+        "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }],
+        "indent": ["error", 2],
+        "comma-dangle": ["error", {
+            "arrays": "always",
+            "objects": "always-multiline",
+            "imports": "always-multiline",
+            "exports": "always-multiline",
+            "functions": "always-multiline"
+        }]
     }
 };
