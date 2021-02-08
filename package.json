@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "test": "test",
-    "start": "nodemon ./src/app.js"
+    "start": "nodemon ./src/server.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,10 @@
   },
   "homepage": "https://github.com/sashaklimenok/nodejs-bootcamp#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.15",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "eslint": "^7.19.0",

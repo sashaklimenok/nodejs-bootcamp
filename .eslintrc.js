@@ -11,8 +11,9 @@ module.exports = {
         "ecmaVersion": 11
     },
     "rules": {
-        "prettier/prettier": ["error", { "singleQuote": true }],
+        "prettier/prettier": ["error", { "singleQuote": true}],
         "object-curly-spacing": ["error", "always"],
+        "new-cap": ["error", { "capIsNewExceptions": ["Router"] }],
         "spaced-comment": "off",
         "no-console": "warn",
         "consistent-return": "off",
@@ -31,7 +32,6 @@ module.exports = {
             "objects": "always-multiline",
             "imports": "always-multiline",
             "exports": "always-multiline",
-            "functions": "always-multiline"
         }]
     }
 };
