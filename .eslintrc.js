@@ -28,7 +28,7 @@ module.exports = {
         "space-before-function-paren": ["error", "always"],
         "new-cap": ["error", { "capIsNewExceptions": ["Router", "Schema"] }],
         "comma-dangle": ["error", {
-            "arrays": "always",
+            "arrays": "always-multiline",
             "objects": "always-multiline",
             "imports": "always-multiline",
             "exports": "always-multiline",
