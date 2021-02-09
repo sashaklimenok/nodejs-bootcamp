@@ -24,6 +24,15 @@ module.exports = {
         "no-underscore-dangle": "off",
         "class-methods-use-this": "off",
         "prefer-destructuring": ["error", { "object": true, "array": false }],
-        "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }]
+        "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }],
+        "space-before-function-paren": ["error", "always"],
+        "new-cap": ["error", { "capIsNewExceptions": ["Router", "Schema"] }],
+        "comma-dangle": ["error", {
+            "arrays": "always",
+            "objects": "always-multiline",
+            "imports": "always-multiline",
+            "exports": "always-multiline",
+        }],
+        "indent": ["error", 2],
     }
 };
