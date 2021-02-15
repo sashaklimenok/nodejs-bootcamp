@@ -11,8 +11,13 @@ module.exports = {
         "ecmaVersion": 11
     },
     "rules": {
-        "prettier/prettier": ["error", { "singleQuote": true }],
         "object-curly-spacing": ["error", "always"],
+        // "quotes": [2, "double", "avoid-escape"],
+        "quotes": [
+            "error",
+            "single",
+            { "avoidEscape": true, "allowTemplateLiterals": false }
+        ],
         "spaced-comment": "off",
         "no-console": "warn",
         "consistent-return": "off",
