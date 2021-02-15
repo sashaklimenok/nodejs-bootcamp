@@ -4,7 +4,6 @@ const router = express.Router();
 //Controllers
 const authorController = require('../../controllers/authorController');
 
-//Get catalog home page
 router
   .get('/authors', authorController.authorList)
   .get('/author/create', authorController.authorCreateGet)

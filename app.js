@@ -11,7 +11,10 @@ dotenv.config({
 });
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/user/users');
+const authorRouter = require('./routes/catalog/author');
+const bookRouter = require('./routes/catalog/book');
+const bookInstanceRouter = require('./routes/catalog/bookInstance');
+const genreRouter = require('./routes/catalog/genre');
 
 //Connection MonogDB
 const DB = `${process.env.DB_LOCAL_LIBRARY}`.replace(
@@ -41,7 +44,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Routes
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/catalog', authorRouter);
+app.use('/catalog', bookRouter);
+app.use('/catalog', bookInstanceRouter);
+app.use('/catalog', genreRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

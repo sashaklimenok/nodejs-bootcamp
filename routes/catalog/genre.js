@@ -4,7 +4,6 @@ const router = express.Router();
 //Controllers
 const genreController = require('../../controllers/genreController');
 
-//Get catalog home page
 router
   .get('/genres', genreController.genreList)
   .get('/genre/create', genreController.genreCreateGet)

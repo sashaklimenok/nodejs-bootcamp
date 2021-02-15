@@ -4,7 +4,6 @@ const router = express.Router();
 //Controllers
 const bookInstanceController = require('../../controllers/bookinstanceController');
 
-//Get catalog home page
 router
   .get('/bookinstances', bookInstanceController.bookInstanceList)
   .get('/bookinstance/create', bookInstanceController.bookInstanceCreateGet)

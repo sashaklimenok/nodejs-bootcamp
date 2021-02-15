@@ -4,7 +4,6 @@ const router = express.Router();
 //Controllers
 const bookController = require('../../controllers/bookController');
 
-//Get catalog home page
 router
   .get('/', bookController.index)
   .get('/books', bookController.bookList)
