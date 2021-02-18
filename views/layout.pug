@@ -7,29 +7,32 @@ html
   body
     nav.navbar.navbar-expand-lg.navbar-light.bg-light
       .container
-        a.navbar-brand(href='#') Navbar
         button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
           span.navbar-toggler-icon
         #navbarSupportedContent.collapse.navbar-collapse
           ul.navbar-nav.me-auto.mb-2.mb-lg-0
-            li.nav-item
-              a.nav-link.active(aria-current='page' href='#') Home
-
-            li.nav-item
-              a.nav-link(href='#') Link
+            -const home = { label : 'Home', href: '/catalog' }
+            -const allBooks = { label : 'All books', href: '/catalog/books' }
+            -const allAuthors = { label : 'All authors', href: '/catalog/authors' }
+            -const allGenres = { label : 'All genres', href: '/catalog/genres' }
+            -const allBookinstances = { label : 'All book-instances', href: '/catalog/bookinstances' }
+            -const links = [home, allBooks, allAuthors, allGenres, allBookinstances]
+            each link in links
+                li.nav-item
+                  a.nav-link.active(aria-current='page' href=link.href) #{link.label}
 
             li.nav-item.dropdown
               a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
-                |Dropdown
+                |Admin links
               ul.dropdown-menu(aria-labelledby='navbarDropdown')
-                li
-                  a.dropdown-item(href='#') Action
-                li
-                  a.dropdown-item(href='#') Another action
-                li
-                  hr.dropdown-divider
-                li
-                  a.dropdown-item(href='#') Something else here
+                -const newAuthor = { label: 'Create new author', href: '/catalog/author/create' }
+                -const newGenre = { label: 'Create new genre', href: '/catalog/genre/create' }
+                -const newBook = { label: 'Create new book', href: '/catalog/book/create' }
+                -const newBookinstance = { label: 'Create new bookinstance', href: '/catalog/bookinstance/create' }
+                -const adminLinks = [newAuthor, newGenre, newBook, newBookinstance]
+                each link in adminLinks
+                    li
+                      a.dropdown-item(href=link.href) #{link.label}
 
           form.d-flex
             input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')

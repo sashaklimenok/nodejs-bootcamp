@@ -1,7 +1,36 @@
 const Book = require('../models/book');
+const Author = require('../models/author');
+const Genre = require('../models/genre');
+const BookInstance = require('../models/bookinstance');
+const async = require('async');
 
 const index = (req, res) => {
-  res.render('../views/index');
+  async.parallel(
+    {
+      bookCount: (callback) => {
+        Book.countDocuments({}, callback);
+      },
+      bookInstanceCount: (callback) => {
+        BookInstance.countDocuments({}, callback);
+      },
+      bookInstanceAvailableCount: (callback) => {
+        BookInstance.countDocuments({ status: 'Available' }, callback);
+      },
+      authorCount: (callback) => {
+        Author.countDocuments({}, callback);
+      },
+      genreCount: (callback) => {
+        Genre.countDocuments({}, callback);
+      },
+    },
+    (err, results) => {
+      res.render('index', {
+        title: 'Local Library Home',
+        error: err,
+        data: results,
+      });
+    }
+  );
 };
 
 const bookList = (req, res) => {
